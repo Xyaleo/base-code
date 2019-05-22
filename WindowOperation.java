@@ -30,22 +30,22 @@ class WindowOperation extends JFrame implements ItemListener, ActionListener {
 		jiang = new Jiangjin();
 		Number = new JTextField(5);
 		choicejob = new JComboBox<String>();
-		L1 = new JLabel("Ö°Î»");
-		L2 = new JLabel("¹¤×÷Ê±¼ä");
-		L3 = new JLabel("½á¹û¿ò:");
-		button = new JButton("È·¶¨");
-		choicejob.addItem("****µ¥»÷´Ë´¦Ñ¡ÔñÖ°Î»****");
-		String[] a = { "³õ¼¶¼¼Êõ¹¤³ÌÊ¦", "ÖĞ¼¶¼¼Êõ¹¤³ÌÊ¦", "¸ß¼¶¼¼Êõ¹¤³ÌÊ¦" };
+		L1 = new JLabel("èŒä½");
+		L2 = new JLabel("å·¥ä½œæ—¶é—´");
+		L3 = new JLabel("ç»“æœæ¡†:");
+		button = new JButton("ç¡®å®š");
+		choicejob.addItem("****å•å‡»æ­¤å¤„é€‰æ‹©èŒä½****");
+		String[] a = { "åˆçº§æŠ€æœ¯å·¥ç¨‹å¸ˆ", "ä¸­çº§æŠ€æœ¯å·¥ç¨‹å¸ˆ", "é«˜çº§æŠ€æœ¯å·¥ç¨‹å¸ˆ" };
 		for (int i = 0; i < a.length; i++) {
 			choicejob.addItem(a[i]);
 		}
 		menubar = new JMenuBar();
-		menu = new JMenu("²Ëµ¥(alt+F)");
-		subMenu = new JMenu("Ñ¡ÔñÖ°Î»");
-		item1 = new JMenuItem("¹ØÓÚ", new ImageIcon("a.gif"));
-		item2 = new JMenuItem("ÍË³ö", new ImageIcon("b.gif"));
-		item3 = new JMenuItem("¼¼ÊõÀà¹¤³ÌÊ¦", new ImageIcon("a.gif"));
-		item4 = new JMenuItem("¹ÜÀíÀà¹¤³ÌÊ¦", new ImageIcon("a.gif"));
+		menu = new JMenu("èœå•(alt+F)");
+		subMenu = new JMenu("é€‰æ‹©èŒä½");
+		item1 = new JMenuItem("å…³äº", new ImageIcon("a.gif"));
+		item2 = new JMenuItem("é€€å‡º", new ImageIcon("b.gif"));
+		item3 = new JMenuItem("æŠ€æœ¯ç±»å·¥ç¨‹å¸ˆ", new ImageIcon("a.gif"));
+		item4 = new JMenuItem("ç®¡ç†ç±»å·¥ç¨‹å¸ˆ", new ImageIcon("a.gif"));
 		menu.setMnemonic(KeyEvent.VK_F);
 		item1.setAccelerator(KeyStroke.getKeyStroke('a'));
 		item2.setAccelerator(KeyStroke.getKeyStroke('b'));
@@ -87,8 +87,8 @@ class WindowOperation extends JFrame implements ItemListener, ActionListener {
 		baseBox.add(Box.createVerticalStrut(20));
 		baseBox.add(new JScrollPane(textShow));
 		add(baseBox);
-		Number.setToolTipText("<html><body><font face=ºÚÌå size=5 color=#06006b>µ¥Î»:h");
-		textShow.setToolTipText("<html><body><font face=ºÚÌå size=4 color=#06006b>½±½ğÒÔÊµ¼ÊÎª×¼");
+		Number.setToolTipText("<html><body><font face=é»‘ä½“ size=5 color=#06006b>å•ä½:h");
+		textShow.setToolTipText("<html><body><font face=é»‘ä½“ size=4 color=#06006b>å¥–é‡‘ä»¥å®é™…ä¸ºå‡†");
 		choicejob.addItemListener(this);
 		button.addActionListener(this);
 		item1.addActionListener(this);
@@ -103,7 +103,7 @@ class WindowOperation extends JFrame implements ItemListener, ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==item1) {
-			JOptionPane.showMessageDialog(null, "ÌáÊ¾:»ñµÃ½±½ğÒÔÊµ¼ÊÎª×¼"+"\n\n           ÖÆ×÷ÈË:Leo", "¹ØÓÚ", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "æç¤º:è·å¾—å¥–é‡‘ä»¥å®é™…ä¸ºå‡†"+"\n\n           åˆ¶ä½œäºº:Leo", "å…³äº", JOptionPane.INFORMATION_MESSAGE);
 		}
 		if(e.getSource()==item2){
 		        System.exit(0);
@@ -111,8 +111,8 @@ class WindowOperation extends JFrame implements ItemListener, ActionListener {
 		
 		if (e.getSource() == item3) {
 			remove(baseBox);
-			String[] a = { "³õ¼¶¹ÜÀíÈËÔ±", "ÖĞ¼¶¹ÜÀíÈËÔ±", "¸ß¼¶¹ÜÀíÈËÔ±" };
-			String[] b = { "³õ¼¶¼¼Êõ¹¤³ÌÊ¦", "ÖĞ¼¶¼¼Êõ¹¤³ÌÊ¦", "¸ß¼¶¼¼Êõ¹¤³ÌÊ¦" };
+			String[] a = { "åˆçº§ç®¡ç†äººå‘˜", "ä¸­çº§ç®¡ç†äººå‘˜", "é«˜çº§ç®¡ç†äººå‘˜" };
+			String[] b = { "åˆçº§æŠ€æœ¯å·¥ç¨‹å¸ˆ", "ä¸­çº§æŠ€æœ¯å·¥ç¨‹å¸ˆ", "é«˜çº§æŠ€æœ¯å·¥ç¨‹å¸ˆ" };
 			for (int i = 0; i < a.length; i++) {
 				choicejob.removeItem(a[i]);
 				choicejob.removeItem(b[i]);
@@ -124,8 +124,8 @@ class WindowOperation extends JFrame implements ItemListener, ActionListener {
 		}
 		if (e.getSource() == item4) {
 
-			String[] a = { "³õ¼¶¼¼Êõ¹¤³ÌÊ¦", "ÖĞ¼¶¼¼Êõ¹¤³ÌÊ¦", "¸ß¼¶¼¼Êõ¹¤³ÌÊ¦" };
-			String[] b = { "³õ¼¶¹ÜÀíÈËÔ±", "ÖĞ¼¶¹ÜÀíÈËÔ±", "¸ß¼¶¹ÜÀíÈËÔ±" };
+			String[] a = { "åˆçº§æŠ€æœ¯å·¥ç¨‹å¸ˆ", "ä¸­çº§æŠ€æœ¯å·¥ç¨‹å¸ˆ", "é«˜çº§æŠ€æœ¯å·¥ç¨‹å¸ˆ" };
+			String[] b = { "åˆçº§ç®¡ç†äººå‘˜", "ä¸­çº§ç®¡ç†äººå‘˜", "é«˜çº§ç®¡ç†äººå‘˜" };
 			for (int i = 0; i < a.length; i++) {
 				choicejob.removeItem(a[i]);
 				choicejob.removeItem(b[i]);
@@ -141,32 +141,32 @@ class WindowOperation extends JFrame implements ItemListener, ActionListener {
 				double result;
 				jiang.set(number);
 				jiang.setJTextArea(textShow);
-				if (number > 0 && job.equals("³õ¼¶¼¼Êõ¹¤³ÌÊ¦")) {
+				if (number > 0 && job.equals("åˆçº§æŠ€æœ¯å·¥ç¨‹å¸ˆ")) {
 					result = jiang.geta();
-					textShow.append("\n" + job + "µÄ½±½ğÎª" + result + "\n");
-				} else if (number > 0 && job.equals("ÖĞ¼¶¼¼Êõ¹¤³ÌÊ¦")) {
+					textShow.append("\n" + job + "çš„å¥–é‡‘ä¸º" + result + "\n");
+				} else if (number > 0 && job.equals("ä¸­çº§æŠ€æœ¯å·¥ç¨‹å¸ˆ")) {
 					result = jiang.getb();
-					textShow.append("\n" + job + "µÄ½±½ğÎª" + result + "\n");
-				} else if (number > 0 && job.equals("¸ß¼¶¼¼Êõ¹¤³ÌÊ¦")) {
+					textShow.append("\n" + job + "çš„å¥–é‡‘ä¸º" + result + "\n");
+				} else if (number > 0 && job.equals("é«˜çº§æŠ€æœ¯å·¥ç¨‹å¸ˆ")) {
 					result = jiang.getc();
-					textShow.append("\n" + job + "µÄ½±½ğÎª" + result + "\n");
+					textShow.append("\n" + job + "çš„å¥–é‡‘ä¸º" + result + "\n");
 				}
-				if (number > 0 && job.equals("³õ¼¶¹ÜÀíÈËÔ±")) {
+				if (number > 0 && job.equals("åˆçº§ç®¡ç†äººå‘˜")) {
 					result = jiang.getd();
-					textShow.append("\n" + job + "µÄ½±½ğÎª" + result + "\n");
-				} else if (number > 0 && job.equals("ÖĞ¼¶¹ÜÀíÈËÔ±")) {
+					textShow.append("\n" + job + "çš„å¥–é‡‘ä¸º" + result + "\n");
+				} else if (number > 0 && job.equals("ä¸­çº§ç®¡ç†äººå‘˜")) {
 					result = jiang.gete();
-					textShow.append("\n" + job + "µÄ½±½ğÎª" + result + "\n");
-				} else if (number > 0 && job.equals("¸ß¼¶¹ÜÀíÈËÔ±")) {
+					textShow.append("\n" + job + "çš„å¥–é‡‘ä¸º" + result + "\n");
+				} else if (number > 0 && job.equals("é«˜çº§ç®¡ç†äººå‘˜")) {
 					result = jiang.getf();
-					textShow.append("\n" + job + "µÄ½±½ğÎª" + result + "\n");
-				} else if (job.equals("****µ¥»÷´Ë´¦Ñ¡ÔñÖ°Î»****")) {
-					textShow.append("\nÇëÑ¡ÔñÒ»¸öÖ°Î»\n");
+					textShow.append("\n" + job + "çš„å¥–é‡‘ä¸º" + result + "\n");
+				} else if (job.equals("****å•å‡»æ­¤å¤„é€‰æ‹©èŒä½****")) {
+					textShow.append("\nè¯·é€‰æ‹©ä¸€ä¸ªèŒä½\n");
 				} else if (number <= 0) {
-					JOptionPane.showMessageDialog(null, "ÊäÈëµÄÊ±¼ä²»ÄÜÎª¸º", "ÌáÊ¾", JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(null, "è¾“å…¥çš„æ—¶é—´ä¸èƒ½ä¸ºè´Ÿ", "æç¤º", JOptionPane.WARNING_MESSAGE);
 				}
 			} catch (Exception exp) {
-				JOptionPane.showMessageDialog(null, "ÇëÊäÈëÕıÈ·µÄÊı×Ö(µ¥Î»:h)", "ÌáÊ¾", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(null, "æ‚¨è¿˜æ²¡é€‰æ‹©èŒä½æˆ–è¾“å…¥çš„æ—¶é—´æ ¼å¼é”™è¯¯(å•ä½:h)", "æç¤º", JOptionPane.WARNING_MESSAGE);
 			}
 		}
 	}
